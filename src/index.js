@@ -8,7 +8,7 @@ const port = 3000;
 app.use(express.static(path.join(__dirname, 'public')));
 
 //HTTP logger
-app.use(morgan('combined'));
+//app.use(morgan('combined'));
 
 //template engine
 app.engine('hbs', handlebars({
@@ -27,6 +27,10 @@ app.get('/news', (req, res) => {
 
 app.get('/login', (req, res) => {
     res.render('login');
+});
+
+app.get('/search', (req, res) => {
+    res.render('search');
 });
 
 app.listen(port, () => {
