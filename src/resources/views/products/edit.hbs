@@ -1,0 +1,24 @@
+<div class="mt-4">
+    <h3>Sửa sản phẩm</h3>
+    {{#with product}}
+    <form class="mt-4" method="POST" action="/products/{{_id}}?_method=PUT">
+        <div class="form-group">
+            <label for="description">Name</label>
+            <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Name" name="name" value="{{name}}">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" aria-describedby="emailHelp" placeholder="Description" name="description">{{description}}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="videoid">VideoId</label>
+            <input type="text" class="form-control" id="videoId" aria-describedby="emailHelp" placeholder="Video Id" name="videoId" value="{{videoId}}">
+        </div>
+        <div class="form-group">
+            <label for="rate">Rate</label>
+            <input type="text" class="form-control" id="rate" aria-describedby="emailHelp" placeholder="Rate" name="rate" value="{{rate}}">
+        </div>
+        <button type="submit" class="btn btn-primary">Sửa sản phẩm</button>
+    </form>
+    {{/with}}
+</div>
